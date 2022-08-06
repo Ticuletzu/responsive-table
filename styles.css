@@ -1,33 +1,46 @@
-body {
-  margin: 0 auto;
-  background-color: lightblue;
-  font-family: 'Space Mono', monospace;
-  
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
+
+body {
+  background-color: lightblue;
+  }
+
 table {
-  padding: 3%;
-  margin: 0 auto;
+  margin: auto;
   border: 1px solid black;
   border-collapse: separate;
   transition: 0.5s;
 }
 
 
-td{
+table td{
   border-top: 1px solid black; 
-  
-}
+  }
 
-th, td {
+table th, table td {
 text-align: center;
 padding: 15px;
+}
+
+table td span {
+  display: none;
+  background: dimgrey;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 5px;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 h1 {
   color: coral;
   text-align: center;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 white, 0 -1px black;
+  -webkit-text-stroke: 1px black;
 }
 
 table:hover {
@@ -35,3 +48,46 @@ table:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition-timing-function: ease-in;
 }
+
+/*flex table on mobile*/
+
+@media only screen and (max-width: 800px) {
+h1 {
+  font-weight: 100;
+  line-height: 1.5em;
+  letter-spacing: 0.2em;
+}
+
+  table {
+    border: none;
+  }
+
+  table caption {
+    letter-spacing: 0.6em;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table tr {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    
+  }
+
+  table td {
+    border: 1px solid;
+    width: 50%;
+    height: auto;
+    padding: 5%;
+  }
+
+table td span {
+  display: block;
+  color: white;
+  letter-spacing: 0.3em;
+}
+}
+
