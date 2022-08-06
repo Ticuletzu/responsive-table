@@ -45,6 +45,7 @@ table td span {
 h1 {
   color: coral;
   text-align: center;
+  letter-spacing: 0.2em;
   -webkit-text-stroke: 1px black;
 }
 
